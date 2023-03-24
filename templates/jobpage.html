@@ -1,0 +1,38 @@
+
+<html>
+  <head>
+
+  {%for job in job%}
+    <title>{{job.title}} -Ismael Web</title>
+    
+   {% include'bootstrap.html' %}
+   
+    
+  </head>
+    <body>
+       {% include 'nav.html' %}
+       {% include'banner.html'%}
+      <div class="container">
+      <h1 class="text-center mt-2 mb-4">Ismael Web</h1>
+    
+    
+      
+      <h3>{{job.title}}</h3>
+      <p></p>
+      
+      <p class="lead">{{job.location}}</p>
+      
+      <h3>Responsiblties</h3>
+      <p>{{job.responsiblties}}</p>
+      <h3>Requirements</h3>
+      <p>{{job.requirements}}</p>
+      <h3>Salary</h3>
+      <p>{{job.currency}}{{job.salary}}</p>
+      </div>
+    
+    
+  {% endfor %}
+   
+  </body>
+   {% include'footer.html' %}
+</html>

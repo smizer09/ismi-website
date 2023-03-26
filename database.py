@@ -31,8 +31,22 @@ def load_job_DB(id):
       a = row._mapping
       job.append(dict(a))
   return job
+
+def add_app_DB(job_id , data ):
+  with engine.connect() as conn:
+    
+    
+    conn.execute(text("INSERT INTO applications(job_id, full_name, email, linkedin_url, education, work_experience, resume_url)  Values ('{}', '{}','{}','{}', '{}' , '{}' , '{}')" .format(job_id , data['full_name'], data['email'], data['linkedin_url'], data['education'], data['work_experience'], data['resume_url']) ))
+    
+    
+    
+    
+
+  
+              
+  
     
   
   
    
-my_secret = os.environ['DB_CONNECTION_STRING']
+

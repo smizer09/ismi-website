@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    {% include'bootstrap.html' %}
+    {% include'nav.html' %}
+    {% include'banner.html' %}
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">Ismael Web</h1>
+    
+    <h4>full name</h4>
+    <div>{{applications['full_name']}}
+    </div>
+
+    <h4>Email</h4>
+    <div>{{applications['email']}}
+    </div>
+
+    <h4>Linked In</h4>
+    <div>{{applications['linkedin_url']}}
+    </div>
+
+    <h4>education</h4>
+    <div>{{applications['education']}}
+    </div>
+
+    <h4>Work Exprience</h4>
+    <div>{{applications['work_experience']}}
+    </div>
+
+    <h4>Resume Url</h4>
+    <div>{{applications['resume_url']}}
+    </div>
+    </div>
+
+
+   {% include 'footer.html' %} 
+  </body>
+</html>
